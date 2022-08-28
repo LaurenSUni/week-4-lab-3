@@ -1,4 +1,4 @@
-//#define Pass60
+#define Pass60
 //#define HD90
 
 using System;
@@ -114,7 +114,7 @@ public class ProgressEvaluator : MonoBehaviour
         GameObject loadObj = GameObject.Find("LoadManager");
         if (loadObj == null)
             throw new EvalFailedException("No LoadManager GameObject found in the scene");
-#if Pass60        
+#if Pass60
         LoadAssets la = loadObj.GetComponent<LoadAssets>();
         if (la == null)
             throw new EvalFailedException("No LoadAssets component on the LoadManager GameObject");
@@ -126,7 +126,7 @@ public class ProgressEvaluator : MonoBehaviour
             "Make sure you are adding files, committing changes, and pushing commits on your respository.");
 #elif (!Pass60)
         throw new EvalFailedException("Open the ProgressEvaluator.cs file and uncomment (i.e. remove the // symbol) the line at the top that says #define Pass60");
-#endif        
+#endif
     }
 
     private void Credit70Band()
@@ -234,7 +234,7 @@ public class ProgressEvaluator : MonoBehaviour
         StartCoroutine(HD90Coroutine());
 #elif (!HD90)
         throw new EvalFailedException("Open the ProgressEvaluator.cs file and uncomment (i.e. remove the // symbol) the line at the top that says #define HD90");
-#endif        
+#endif
     }
 
 
